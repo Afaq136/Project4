@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!-- Base Amount EditText -->
+    <EditText
+        android:id="@+id/baseAmountEditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="Enter Amount"
+        android:textAlignment="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textSize="24sp"/>
+
+    <!-- Percentage TextView -->
+    <TextView
+        android:id="@+id/percentageTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0%"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/baseAmountEditText"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:textSize="20sp"/>
+
+    <!-- Percentage Slider -->
+    <SeekBar
+        android:id="@+id/percentageSlider"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:max="100"
+        app:layout_constraintStart_toEndOf="@+id/percentageTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/baseAmountEditText"
+        android:layout_marginTop="16dp"
+        android:textAlignment="center"/>
+
+    <!-- Tip Amount TextView -->
+    <TextView
+        android:id="@+id/tipAmountTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Tip: $0.00"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/percentageSlider"
+        android:layout_marginTop="16dp"
+        android:textSize="24sp"
+        android:textAlignment="center"/>
+
+    <!-- Total Amount TextView -->
+    <TextView
+        android:id="@+id/totalAmountTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Total: $0.00"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tipAmountTextView"
+        android:layout_marginTop="16dp"
+        android:textSize="24sp"
+        android:textAlignment="center"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
